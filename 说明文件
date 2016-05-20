@@ -27,4 +27,11 @@
 
 7.bean定义继承   只要在Beans.xml中指定 parent="" 属性即可  同时父类最好指定abstract="true"表示该类不能被实例化
 	无论父bean是否为抽象的，父bean中定义的property，子bean中的类一定要声明该属性，否则会报错
+	
+8.Spring 基于构造函数的依赖注入 ConstructorSpring.java
 
+9.Spring 基于设值函数的依赖注入SetValueSpring.java
+
+10.Spring 内部类依赖注入InnerSpring.java
+
+11.基于注解的配置 AnotationSpring.java
