@@ -1,0 +1,30 @@
+1.HelloSpring.java MApplicationContext.java Beans.xml 演示使用spring创建对象并使用
+
+2.BeanFactory.java演示XmlBeanFactory接口的使用
+  MApplicationContext.java Spring控制反转容器以及ApplicationContext中三个不同实现类的用法
+  
+3.Beans.xml 中bean对象的定义(包含初始化方法、懒加载、销毁方法、抽象方法等等)
+	class						这个属性是强制性的，并且指定用来创建 bean 的 bean 类。
+	name						这个属性指定唯一的 bean 标识符。在基于 XML 的配置元数据中，你可以使用 ID 和/或 name 属性来指定 bean 标识符。
+	scope						这个属性指定由特定的 bean 定义创建的对象的作用域，它将会在 bean 作用域的章节中进行讨论。
+	constructor-arg				它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+	properties					它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+	autowiring mode				它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+	lazy-initialization mode	延迟初始化的 bean 告诉 IoC 容器在它第一次被请求时，而不是在启动时去创建一个 bean 实例。
+	initialization 方法			在 bean的所有必需的属性被容器设置之后，调用回调方法。它将会在 bean 的生命周期章节中进行讨论。
+	destruction 方法				当包含该 bean的容器被销毁时，使用回调方法。它将会在 bean 的生命周期章节中进行讨论。
+
+4.bean作用域   BeanScope.java
+	singleton		该作用域将 bean 的定义的限制在每一个 Spring IoC 容器中的一个单一实例(默认)。
+	prototype		该作用域将单一 bean 的定义限制在任意数量的对象实例。
+	request			该作用域将 bean 的定义限制为 HTTP 请求。只在 web-aware Spring ApplicationContext 的上下文中有效。
+	session			该作用域将 bean 的定义限制为 HTTP 会话。 只在web-aware Spring ApplicationContext的上下文中有效。
+	global-session	该作用域将 bean 的定义限制为全局 HTTP 会话。只在 web-aware Spring ApplicationContext 的上下文中有效。
+	
+5.bean生命周期  BeanLifecycle.java  两种实现方式及bean较多的时候的优化
+
+6.bean MBeanPostProcessor.java  bean的后置处理器实现方式 
+
+7.bean定义继承   只要在Beans.xml中指定 parent="" 属性即可  同时父类最好指定abstract="true"表示该类不能被实例化
+	无论父bean是否为抽象的，父bean中定义的property，子bean中的类一定要声明该属性，否则会报错
+

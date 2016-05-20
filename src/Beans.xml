@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="hellospring" class="com.zbao.study.bean.HelloSpring">
+		<property name="message" value="Hello World!" />
+	</bean>
+
+	<!-- 一个简单bean对象的定义 -->
+	<bean id="..." class="...">
+
+	</bean>
+
+	<!-- 一个懒加载模式bean对象的定义 -->
+	<bean id="..." class="..." lazy-init="true">
+
+	</bean>
+
+	<!-- 一个带有初始化方法的bean对象的定义 -->
+	<bean id="..." class="..." init-method="...">
+
+	</bean>
+
+	<!-- 一个带有销毁方法的bean对象的定义 -->
+	<bean id="..." class="..." destroy-method="...">
+
+	</bean>
+
+	<!-- 抽象类、 父类等bean对象的定义等等 -->
+
+</beans>
